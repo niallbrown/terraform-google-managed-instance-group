@@ -37,11 +37,11 @@ jobs:
       backend_prefix: terraform-google-managed-instance-group/
       env_name: tf-ci-mig-zonal
       example_dir: examples/zonal
-      region: us-central1
-      zone: us-central1-a
+      region: europe-west4
+      zone: europe-west4-a
       TF_VAR_network_name: tf-ci-mig-zonal
-      TF_VAR_region: us-central1
-      TF_VAR_zone: us-central1-a
+      TF_VAR_region: europe-west4
+      TF_VAR_zone: europe-west4-a
     on_failure:
       put: send-an-email
       params:
@@ -73,11 +73,11 @@ jobs:
       backend_prefix: terraform-google-managed-instance-group/
       env_name: tf-ci-mig-regional
       example_dir: examples/regional
-      region: us-central1
-      zone: us-central1-b
+      region: europe-west4
+      zone: europe-west4-b
       TF_VAR_network_name: tf-ci-mig-regional
-      TF_VAR_region: us-central1
-      TF_VAR_zone: us-central1-b
+      TF_VAR_region: europe-west4
+      TF_VAR_zone: europe-west4-b
     on_failure:
       put: send-an-email
       params:
@@ -109,11 +109,11 @@ jobs:
       backend_prefix: terraform-google-managed-instance-group/
       env_name: tf-ci-mig-autoscaling
       example_dir: examples/autoscaling
-      region: us-central1
-      zone: us-central1-c
+      region: europe-west4
+      zone: europe-west4-c
       TF_VAR_network_name: tf-ci-mig-autoscaling
-      TF_VAR_region: us-central1
-      TF_VAR_zone: us-central1-c
+      TF_VAR_region: europe-west4
+      TF_VAR_zone: europe-west4-c
     on_failure:
       put: send-an-email
       params:
@@ -143,11 +143,11 @@ jobs:
       backend_prefix: terraform-google-managed-instance-group/
       env_name: tf-ci-mig-blue-green
       example_dir: examples/blue-green
-      region: us-central1
-      zone: us-central1-f
+      region: europe-west4
+      zone: europe-west4-f
       TF_VAR_network_name: tf-ci-mig-blue-green
-      TF_VAR_region: us-central1
-      TF_VAR_zone: us-central1-f
+      TF_VAR_region: europe-west4
+      TF_VAR_zone: europe-west4-f
       add_test_script: |
         TF_VAR_deploy_color=green terraform plan -lock=false -no-color -out terraform.tfplan
         terraform apply -no-color -input=false -lock=false -auto-approve terraform.tfplan | tee ${EMAIL}/body-failed

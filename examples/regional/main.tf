@@ -4,7 +4,7 @@ variable "labels" {
 }
 
 variable "region" {
-  default = "us-central1"
+  default = "europe-west4"
 }
 
 provider "google" {

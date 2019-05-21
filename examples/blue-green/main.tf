@@ -15,11 +15,11 @@ variable "deploy_color" {
 }
 
 variable "region" {
-  default = "us-central1"
+  default = "europe-west4"
 }
 
 variable "zone" {
-  default = "us-central1-b"
+  default = "europe-west4-b"
 }
 
 provider "google" {

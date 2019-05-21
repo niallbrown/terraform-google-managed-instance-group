@@ -40,7 +40,7 @@ Run the [`lookbusy`](https://github.com/beloglazov/cpu-load-generator.git) comma
 gcloud compute ssh $(terraform output instance) -- lookbusy -c 50
 ```
 
-Open the [Cloud Console](https://console.cloud.google.com/compute/instanceGroups/details/us-central1/autoscale-cluster) to seee that 4 more instances were added to the group in response to the increased CPU.
+Open the [Cloud Console](https://console.cloud.google.com/compute/instanceGroups/details/europe-west4/autoscale-cluster) to seee that 4 more instances were added to the group in response to the increased CPU.
 
 Press CTRL-C to stop the lookbusy command. After a few minutes, the managed instance group should scale back down.
 

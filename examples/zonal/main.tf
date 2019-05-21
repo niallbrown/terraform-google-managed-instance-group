@@ -4,11 +4,11 @@ variable "labels" {
 }
 
 variable "region" {
-  default = "us-central1"
+  default = "europe-west4"
 }
 
 variable "zone" {
-  default = "us-central1-b"
+  default = "europe-west4-b"
 }
 
 variable "module_enabled" {

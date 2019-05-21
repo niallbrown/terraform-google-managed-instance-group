@@ -258,47 +258,6 @@ variable autoscaling_lb {
   default     = []
 }
 
-/* Health checks */
-variable http_health_check {
-  description = "Enable or disable the http health check for auto healing."
-  default     = true
-}
-
-variable hc_initial_delay {
-  description = "Health check, intial delay in seconds."
-  default     = 30
-}
-
-variable hc_interval {
-  description = "Health check, check interval in seconds."
-  default     = 30
-}
-
-variable hc_timeout {
-  description = "Health check, timeout in seconds."
-  default     = 10
-}
-
-variable hc_healthy_threshold {
-  description = "Health check, healthy threshold."
-  default     = 1
-}
-
-variable hc_unhealthy_threshold {
-  description = "Health check, unhealthy threshold."
-  default     = 10
-}
-
-variable hc_port {
-  description = "Health check, health check port, if different from var.service_port, if not given, var.service_port is used."
-  default     = ""
-}
-
-variable hc_path {
-  description = "Health check, the http path to check."
-  default     = "/"
-}
-
 variable ssh_fw_rule {
   description = "Whether or not the SSH Firewall Rule should be created"
   default     = true

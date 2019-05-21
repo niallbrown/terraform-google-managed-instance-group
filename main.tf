@@ -78,7 +78,6 @@ resource "google_compute_instance_group_manager" "default" {
 
   instance_template = "${google_compute_instance_template.default.self_link}"
 
-  region = "${var.region}"
   zone = "${var.zone}"
 
   target_pools = ["${var.target_pools}"]

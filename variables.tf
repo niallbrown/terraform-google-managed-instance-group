@@ -26,12 +26,12 @@ variable project {
 
 variable region {
   description = "Region for cloud resources."
-  default     = "europe-west4a"
+  default     = "europe-west4-a"
 }
 
 variable zone {
   description = "Zone for managed instance groups."
-  default     = "europe-west4a"
+  default     = "europe-west4-a"
 }
 
 variable network {
